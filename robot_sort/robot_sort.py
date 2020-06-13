@@ -97,7 +97,29 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        # for i in range(len(self._list)-1):
+        #     for j in range(0,len(self._list)-1-i):
+        #         if self._list[j] > self._list[j+1]:
+        #             self._list[j], self._list[j+1] = self._list[j+1], self._list[j]
+
+        # return self._list
+        # self.swap_item()
+        while self.can_move_right():
+            if(self.compare_item() == None):
+                self.swap_item()
+                self.move_right()
+            elif(self.compare_item() == 1):
+                # self.swap_item()
+                self.move_right()
+            elif(self.compare_item() == -1):
+                self.swap_item()
+                self.move_right()
+            else:
+                self.move_right()
+
+        while self.can_move_left():
+            self.move_left()
+
 
 
 if __name__ == "__main__":
@@ -110,3 +132,13 @@ if __name__ == "__main__":
 
     robot.sort()
     print(robot._list)
+
+
+sum = 0
+for i in range(8):
+    j = 1
+    print(i)
+    while j < 8:
+        print(j)
+        j *= 2
+        sum += 1

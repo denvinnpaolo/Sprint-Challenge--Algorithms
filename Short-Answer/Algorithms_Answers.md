@@ -2,14 +2,16 @@
 
 ## Exercise I
 
-a)
+a) O(n)
 
 
-b)
+b) O(n^2)
 
 
-c)
+c)O(n)
 
 ## Exercise II
+
+
 
 
